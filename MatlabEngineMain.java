@@ -31,11 +31,11 @@ public class MatlabEngineMain {
 
     private static void InitializeEngine() {
         try{
-            System.out.println("Initializing Matlab Engine ...");  //<-- do we need this print ?
+            System.out.println("Initializing Matlab Engine ...");  
 
             matlab_engine = MatlabEngine.startMatlab(); /*!!!*/
 
-            System.out.println("Initialization Completed");		//<-- do we need this print ?
+            System.out.println("Initialization Completed");	
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (ExecutionException e) {
@@ -48,7 +48,9 @@ public class MatlabEngineMain {
         // messages are printed from matlab (!?)
         try {
             // Change directory and evaluate function
-            String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";  //TODO: change this path !!!
+            //String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";  //TODO: change this path !!!
+		String matlabFunDir = "C:\Users\RRubin\Downloads\ObjectMapper";  
+		
             matlab_engine.eval("cd '" + matlabFunDir + "'");
             matlab_engine.feval(0, "intializeDetector");
         } catch (InterruptedException e) {
