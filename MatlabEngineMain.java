@@ -49,7 +49,7 @@ public class MatlabEngineMain {
         try {
             // Change directory and evaluate function
             //String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";  //TODO: change this path !!!
-		String matlabFunDir = "C:\Users\RRubin\Downloads\ObjectMapper";  
+		String matlabFunDir = "C:\\Users\RRubin\\Downloads\\ObjectMapper";  
 		
             matlab_engine.eval("cd '" + matlabFunDir + "'");
             matlab_engine.feval(0, "intializeDetector");
@@ -68,7 +68,8 @@ public class MatlabEngineMain {
 
         try {
             // Change directory and evaluate function
-            String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";   //TODO: change this path !!!
+            //String matlabFunDir = "C:\\Users\\Danielle\\Desktop\\ObjectMapper";   //TODO: change this path !!!
+		String matlabFunDir = "C:\\Users\RRubin\\Downloads\\ObjectMapper";  
             matlab_engine.eval("cd '" + matlabFunDir + "'");
 			//
             Object result = matlab_engine.feval(1, "Detect_Map", imagePath, th, showDetection, showMapping);
