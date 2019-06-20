@@ -7,15 +7,14 @@
 
 // package org.jbox2d.testbed.framework.j2d;
 
+//
 import java.awt.BorderLayout;
 import java.io.File;
 import java.util.concurrent.ExecutionException;
-
+//
 import javax.swing.*;
-
+//
 import com.mathworks.engine.MatlabEngine;
-
-import static org.jbox2d.testbed.framework.j2d.TestbedSidePanel.setNewImageLabel;
 
 
 public class MatlabEngineMain {
@@ -90,8 +89,10 @@ public class MatlabEngineMain {
     }
 
     public static String getImagePath(){
-        return chooser.getSelectedFile().getPath();  // TODO: THERE IS  no more choose, this function must be changed !
+        //return chooser.getSelectedFile().getPath();  // TODO: THERE IS  no more choose, this function must be changed !
+	    return ""; //TODO: THIS NEEDS TO BE DELETED ! NOTE THAT THIS IS JUST A TEMP PATCH
 //        return "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\Real_301.jpg";
+	    
     }
 
 
