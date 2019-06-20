@@ -5,10 +5,6 @@
  *
  ******************************************************************************/
 
-
-
-
-
 // package org.jbox2d.testbed.framework.j2d;
 
 import java.awt.BorderLayout;
@@ -18,14 +14,11 @@ import java.util.concurrent.ExecutionException;
 import javax.swing.*;
 
 import com.mathworks.engine.MatlabEngine;
-import org.jbox2d.testbed.framework.*;
-import org.jbox2d.testbed.framework.AbstractTestbedController.MouseBehavior;
-import org.jbox2d.testbed.framework.AbstractTestbedController.UpdateBehavior;
 
 import static org.jbox2d.testbed.framework.j2d.TestbedSidePanel.setNewImageLabel;
 
 
-public class TestbedMain {
+public class MatlabEngineMain {
     // private static final Logger log = LoggerFactory.getLogger(TestbedMain.class);
 
     // variable for the engine.
@@ -91,7 +84,8 @@ public class TestbedMain {
     }
 	
 	public static void setNewJsonPath(boolean showDetection, boolean showMapping, int threshold){
-        jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100);
+        //jsonPath = RunMatlab(getImagePath(), showDetection, showMapping, (double)threshold/100); //TODO: IMPORTANT - this is noted only because the function
+				//getImagePath()  needs re- implementation
 //        jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";
     }
 
@@ -113,7 +107,7 @@ public class TestbedMain {
         InitializeDetector();
 
         setNewJsonPath(false, false, 98);
-        setNewImageLabel();   // what does this do ?
+//        setNewImageLabel();   // what does this do ?
         jsonPath = "C:\\Users\\Danielle\\Downloads\\jbox2d\\Images\\outputExp.json";   //TODO: change this path !!!
 
     }
